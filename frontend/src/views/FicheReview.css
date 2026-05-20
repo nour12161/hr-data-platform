@@ -1,0 +1,145 @@
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  height: 100vh;
+  margin: auto;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #f7f9fc;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.chat-header {
+  background-color: #004085;
+  color: white;
+  padding: 1rem;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.chat-box {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-message {
+  max-width: 80%;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 16px;
+  line-height: 1.6;
+  font-size: 1rem;
+  white-space: pre-wrap;
+}
+
+.chat-message.user {
+  align-self: flex-end;
+  background-color: #007bff;
+  color: white;
+}
+
+.chat-message.assistant {
+  align-self: flex-start;
+  background-color: #e9ecef;
+  color: #212529;
+}
+
+.message-text.typing {
+  font-style: italic;
+  color: #555;
+}
+
+.chat-input {
+  display: flex;
+  padding: 1rem;
+  background-color: #f1f3f5;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  margin-right: 0.75rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+.chat-input button {
+  padding: 0.75rem 1.5rem;
+  background-color: #004085;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.chat-input button:hover {
+  background-color: #002c5c;
+}
+
+
+.timestamp {
+  font-size: 0.75rem;
+  color: #6c757d;
+  margin-top: 4px;
+  text-align: right;
+}
+
+.reset-btn {
+  background-color: #ffc107;
+  border: none;
+  color: #212529;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 20px;
+  cursor: pointer;
+  float: right;
+  margin-top: -2.5rem;
+  margin-right: 1rem;
+}
+
+.reset-btn:hover {
+  background-color: #e0a800;
+}
+
+
+.chat-header {
+  background-color: #004085;
+  color: white;
+  padding: 1rem 1.5rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reset-btn {
+  margin-top: 0.75rem;
+  background-color: #ffc107;
+  border: none;
+  color: #212529;
+  padding: 6px 16px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.reset-btn:hover {
+  background-color: #e0a800;
+}

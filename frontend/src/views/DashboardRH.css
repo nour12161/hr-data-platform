@@ -1,0 +1,186 @@
+/* DashboardRH.css */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9fb;
+  color: #333;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  font-weight: 500;
+  color: #374151;
+}
+
+select {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background-color: white;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+}
+
+select:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+.kpi-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #eef2ff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.kpi-card:hover {
+  transform: translateY(-3px);
+}
+
+.kpi-title {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.kpi-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #4338ca;
+}
+
+.chart-box {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  transition: box-shadow 0.3s;
+}
+
+.chart-box:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.chart-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+@media (min-width: 768px) {
+  .kpi-grid {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .chart-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* DashboardRH.css */
+
+.dashboard-container {
+  padding: 2rem;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f9f9fb;
+  color: #333;
+  min-height: 100vh;
+}
+
+.dashboard-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filter-bar label {
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+.filter-bar select {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.kpi-grid {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.kpi-card {
+  flex: 1 1 220px;
+  background-color: white;
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.kpi-title {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.6rem;
+}
+
+.kpi-value {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2e86de;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  gap: 2rem;
+}
+
+.chart-box {
+  background-color: white;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.chart-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #34495e;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.loading-text {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.1rem;
+}

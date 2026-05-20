@@ -1,0 +1,179 @@
+table.table-fixed {
+  table-layout: fixed;
+  word-wrap: break-word;
+}
+
+table.table-fixed th,
+table.table-fixed td {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+
+/* === Général === */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+  line-height: 1.6;
+}
+
+/* === Titres === */
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #FF7900;
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+/* === Conteneur principal === */
+.section-card {
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 12px;
+  border: 1px solid #dee2e6;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.section-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* === Boutons === */
+.btn-primary {
+  background-color: #FF7900;
+  border: none;
+  color: white;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(255, 121, 0, 0.2);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #e26e00;
+  box-shadow: 0 6px 12px rgba(255, 121, 0, 0.3);
+}
+
+.btn-outline-primary {
+  background-color: transparent;
+  border: 1px solid #4B84E6;
+  color: #4B84E6;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: #4B84E6;
+  color: white;
+}
+
+/* === Inputs & Formulaires === */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #FF7900;
+  box-shadow: 0 0 0 0.2rem rgba(255, 121, 0, 0.25);
+  outline: none;
+}
+
+/* === Tableaux === */
+table {
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+table th,
+table td {
+  border: 1px solid #dee2e6;
+  padding: 10px;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+table th {
+  background-color: #f1f1f1;
+  font-weight: 600;
+}
+
+/* === Boutons dans le tableau === */
+.btn-edit {
+  background-color: #FFC107;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  margin-right: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-edit:hover {
+  background-color: #e0a800;
+}
+
+.btn-delete {
+  background-color: #DC3545;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-delete:hover {
+  background-color: #c82333;
+}
+
+/* === Animation légère === */
+.fade-in {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* === Messages === */
+.success-message {
+  color: #198754;
+  font-weight: 500;
+}
+
+.error-message {
+  color: #dc3545;
+  font-weight: 500;
+}

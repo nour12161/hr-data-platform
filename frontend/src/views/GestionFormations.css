@@ -1,0 +1,129 @@
+/* === Structure globale === */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Titres === */
+h2.section-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 20px;
+  position: relative;
+  letter-spacing: -0.5px;
+}
+
+h2.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #FF7900;
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+/* === Cartes (conteneurs) === */
+.section-card {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* === Tableau des formations (compact) === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  font-size: 0.85rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+  color: #333;
+}
+
+tr:hover {
+  background-color: #fdf6ef;
+  transition: background-color 0.2s ease-in-out;
+}
+
+td.flex {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+/* === Boutons d'action === */
+.btn-view,
+.btn-edit,
+.btn-delete {
+  padding: 5px 10px;
+  font-size: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-view {
+  background-color: #4B84E6;
+  color: #fff;
+}
+.btn-edit {
+  background-color: #FFC107;
+  color: #fff;
+}
+.btn-delete {
+  background-color: #DC3545;
+  color: #fff;
+}
+
+.btn-view:hover,
+.btn-edit:hover,
+.btn-delete:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+/* === Modals === */
+.modal-content {
+  border-radius: 12px;
+  border: 1px solid #e6e6e6;
+  padding: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* === Texte important === */
+strong {
+  color: #FF7900;
+}
+
+/* === Animation douce === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}

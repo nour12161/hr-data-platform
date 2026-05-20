@@ -1,0 +1,207 @@
+/* === Base générale === */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* === Titres === */
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #FF7900;
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+/* === Cartes / sections === */
+.section-card {
+  padding: 24px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  border: 1px solid #d6d6d6;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.section-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* === Champs de formulaire === */
+form .form-group {
+  margin-bottom: 1rem;
+}
+
+form label {
+  font-weight: 600;
+  color: #333;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+textarea,
+.form-select,
+.react-select__control {
+  border-radius: 6px;
+  border: 1px solid #d6d6d6;
+  padding: 10px 14px;
+  background-color: #fff;
+  color: #000;
+  font-size: 15px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+.react-select__control--is-focused {
+  border-color: #FF7900;
+  box-shadow: 0 0 0 0.25rem rgba(255, 121, 0, 0.25);
+  outline: none;
+}
+
+/* === Boutons principaux === */
+.btn-primary {
+  background-color: #FF7900 !important;
+  border-color: #FF7900 !important;
+  color: white !important;
+  font-weight: 500;
+  padding: 8px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(255, 121, 0, 0.2);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #e26e00 ;
+  border-color: #e26e00 ;
+  box-shadow: 0 6px 12px rgba(255, 121, 0, 0.3);
+}
+
+/* === Boutons action (tableau) === */
+.btn-view,
+.btn-edit,
+.btn-delete {
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, transform 0.1s ease, filter 0.2s ease;
+}
+
+/* Couleurs brillantes par défaut */
+.btn-view {
+  background-color: #4B84E6 !important;
+  color: white !important;
+  filter: brightness(1.1);
+}
+
+.btn-edit {
+  background-color: #FFC107 !important;
+  color: white !important;
+  filter: brightness(1.1);
+}
+
+.btn-delete {
+  background-color: #DC3545 !important;
+  color: white !important;
+  filter: brightness(1.1);
+}
+
+/* Effet quand on clique (active) → plus fade */
+.btn-view:active,
+.btn-edit:active,
+.btn-delete:active {
+  filter: brightness(0.85);
+  transform: scale(0.97);
+}
+
+
+
+.btn-view:hover,
+.btn-edit:hover,
+.btn-delete:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+/* === Table === */
+.table th {
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 600;
+  background-color: #f4f4f4;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+/* === Barre de recherche === */
+input[type="text"]::placeholder {
+  font-style: italic;
+  color: #888;
+}
+
+/* === Modals === */
+.modal-content {
+  border-radius: 12px;
+  border: 1px solid #e6e6e6;
+  padding: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.modal-body ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.modal-body li {
+  margin-bottom: 0.5rem;
+  font-size: 14px;
+}
+
+/* === Animation === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease;
+}
+
+/* === Select (React-Select) === */
+.react-select__menu {
+  z-index: 1050 !important;
+  position: absolute !important;
+}
+
+.react-select__control {
+  min-height: 45px;
+  font-size: 15px;
+  border-radius: 6px;
+}

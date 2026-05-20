@@ -1,0 +1,100 @@
+/* ===== 🧱 STRUCTURE GLOBALE ===== */
+.sidebar-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* La sidebar prend toute la hauteur de l'écran */
+  overflow: hidden; /* Empêche les barres de défilement globales */
+}
+
+.sidebar-content {
+  flex-grow: 1; /* Occupe tout l'espace disponible */
+  overflow-y: auto; /* Scroll vertical uniquement sur le contenu */
+  padding-bottom: 20px; /* Évite que le dernier élément touche le bas */
+  scrollbar-width: none; /* Firefox : cache la scrollbar */
+  -ms-overflow-style: none; /* IE/Edge : cache la scrollbar */
+}
+
+/* Chrome/Safari : cache la scrollbar */
+.sidebar-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===== 🔽 BOUTON EN BAS ===== */
+.sidebar-bottom {
+  padding: 10px 15px;
+  text-align: center;
+  margin-top: auto; /* ✅ pousse en bas automatiquement */
+}
+
+.sidebar-bottom button {
+  width: 100%;
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff6600;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar-bottom button:hover {
+  background-color: #e65c00;
+  transform: scale(1.02); /* Léger zoom au survol */
+}
+
+/* ===== 🎨 ICONES + LIENS ===== */
+.sidebar-content .nav-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  border-radius: 6px;
+}
+
+.sidebar-content .nav-link i {
+  font-size: 1.2rem;
+  color: #ff6600; /* Icônes toujours visibles */
+  margin-right: 10px;
+  transition: transform 0.2s ease;
+}
+
+.sidebar-content .nav-link:hover {
+  background-color: #f8f8f8;
+}
+
+.sidebar-content .nav-link:hover i {
+  transform: scale(1.1);
+}
+
+/* Lien actif */
+.sidebar-content .nav-link.active {
+  background-color: #ffe6cc;
+  color: #ff6600;
+}
+
+.sidebar-content .nav-link.active i {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+
+.sidebar-group-title {
+  color: #fff;
+  background-color: #444; /* ou couleur de ton thème */
+  border-radius: 5px;
+  margin: 5px 10px;
+  transition: background 0.2s;
+}
+
+.sidebar-group-title:hover {
+  background-color: #555;
+}
+
+.sidebar-submenu .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
